@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Easy Blocks For Gutenberg
- * Description:       Example static block scaffolded with Create Block tool.
+ * Description:       Easy Blocks is simple block for Gutenberg.
  * Plugin URI: https://easyblocks.abdul-k.com/
  * Version:           1.0.0
  * Requires at least: 5.2
