@@ -59,11 +59,6 @@ const attributes = {
 	size: {
 		enum: ["large", "small"],
 	},
-	title: {
-		type: "array",
-		source: "children",
-		selector: ".callout-title",
-	},
 	mediaID: {
 		type: "number",
 	},

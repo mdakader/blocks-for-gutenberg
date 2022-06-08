@@ -37,8 +37,6 @@ function ebfg_block_init() {
 	foreach( $blocks as $block ) {
 		register_block_type( plugin_dir_path( __FILE__ ) . 'build/blocks/' . $block );
 	}
-	// register_block_type_from_metadata( __DIR__ . '/build/blocks/iconbox' );
-	// register_block_type_from_metadata( __DIR__ . '/build/blocks/infobox' );
 }
 add_action( 'init', 'ebfg_block_init' );
 
