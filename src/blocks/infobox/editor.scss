@@ -1,0 +1,46 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-gutenberg-infobox {
+    border: 1px dotted #f00;
+}
+
+.iconselector-wrapper .rfip {
+    position: relative;
+    margin: 8px 0;
+    width: 100%;
+    vertical-align: middle
+}
+
+.iconselector-wrapper .rfipbtn__elm {
+    font-size: 14px;
+}
+
+.iconselector-wrapper .rfipbtn {
+    min-height: 40px;
+    width: 100%;
+}
+
+.iconselector-wrapper .rfipbtn__button {
+    width: 38px;
+}
+
+.iconselector-wrapper .rfipbtn__button i {
+    font-size: 24px;
+}
+
+.iconselector-wrapper .rfipdropdown {
+    width: 100%;
+    top: 40px !important;
+}
+
+.iconselector-wrapper .rfipicons__ibox {
+    font-size: 16px;
+}
+
+.iconselector-wrapper .rfipicons__icon {
+    height: 40px;
+}

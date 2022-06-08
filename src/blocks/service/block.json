@@ -1,0 +1,15 @@
+{
+	"apiVersion": 2,
+	"name": "create-block/ebfg-service",
+	"version": "1.0.0",
+	"title": "Service",
+	"category": "ebfg-block",
+	"icon": "smiley",
+	"description": "Service block!",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "ebfg",
+	"editorStyle": "file:../../index.css",
+	"style": "file:../../style-index.css"
+}
