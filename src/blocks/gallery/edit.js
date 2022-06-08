@@ -6,6 +6,7 @@ import {
 	Toolbar,
 	ToolbarGroup,
 	ToolbarButton,
+	BlockIcon,
 } from "@wordpress/components";
 
 import {
@@ -13,13 +14,19 @@ import {
 	ColorPalette,
 	InspectorControls,
 	MediaUpload,
-	BlockIcon,
 	BlockControls,
 	MediaUploadCheck,
 	AlignmentToolbar,
+	MediaPlaceholder,
 } from "@wordpress/block-editor";
 
-import { paragraph, formatBold, formatItalic, link } from "@wordpress/icons";
+import {
+	paragraph,
+	formatBold,
+	formatItalic,
+	link,
+	gallery,
+} from "@wordpress/icons";
 
 import "./editor.scss";
 
@@ -104,6 +111,27 @@ export default function Edit({ attributes, setAttributes }) {
 					)}
 				/>
 			</BlockControls>
+			<MediaPlaceholder
+				multiple={true}
+				addToGallery={true}
+				value={attributes.img_url}
+				// icon={<BlockIcon icon={gallery} />}
+				render={() => <BlockIcon icon={gallery} />}
+				labels={{
+					title: "Image Gallery",
+					instructions: "Image gallery show",
+				}}
+			/>
+			<MediaUploadCheck>
+				<MediaUpload
+					onSelect={(media) => console.log("selected " + media.length)}
+					allowedTypes={ALLOWED_MEDIA_TYPES}
+					value={attributes.img_url}
+					render={({ open }) => (
+						<Button onClick={open}>Open Media Library</Button>
+					)}
+				/>
+			</MediaUploadCheck>
 			<TextControl
 				value={attributes.message}
 				onChange={(val) => setAttributes({ message: val })}
