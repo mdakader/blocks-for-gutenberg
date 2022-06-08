@@ -81,6 +81,17 @@ const attributes = {
 	alignment: {
 		type: "string",
 	},
+	images: {
+		type: "array",
+		default: [],
+	},
+	supports: {
+		color: {
+			text: true,
+			link: true,
+			background: true,
+		},
+	},
 };
 
 registerBlockType(name, {

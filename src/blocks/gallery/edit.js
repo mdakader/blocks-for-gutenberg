@@ -1,12 +1,26 @@
 import { __ } from "@wordpress/i18n";
-import { TextControl, Button, PanelBody } from "@wordpress/components";
+import {
+	TextControl,
+	Button,
+	PanelBody,
+	Toolbar,
+	ToolbarGroup,
+	ToolbarButton,
+} from "@wordpress/components";
 
 import {
 	useBlockProps,
 	ColorPalette,
 	InspectorControls,
 	MediaUpload,
+	BlockIcon,
+	BlockControls,
+	MediaUploadCheck,
+	AlignmentToolbar,
 } from "@wordpress/block-editor";
+
+import { paragraph, formatBold, formatItalic, link } from "@wordpress/icons";
+
 import "./editor.scss";
 
 export default function Edit({ attributes, setAttributes }) {
@@ -20,6 +34,10 @@ export default function Edit({ attributes, setAttributes }) {
 
 	const onSelectImg = (imgSelect) => {
 		setAttributes({ mediaURL: imgSelect.url, mediaID: imgSelect.id });
+	};
+
+	const onSelectImages = (imagesSelect) => {
+		setAttributes({ images: imagesSelect });
 	};
 
 	const ALLOWED_MEDIA_TYPES = ["audio", "image"];
@@ -62,6 +80,30 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 			</InspectorControls>
+			<BlockControls>
+				<Toolbar label="Options">
+					<ToolbarGroup>
+						<ToolbarButton icon={paragraph} label="Paragraph" />
+					</ToolbarGroup>
+					<ToolbarGroup>
+						<ToolbarButton icon={formatBold} label="Bold" />
+						<ToolbarButton icon={formatItalic} label="Italic" />
+						<ToolbarButton icon={link} label="Link" />
+					</ToolbarGroup>
+				</Toolbar>
+				<AlignmentToolbar />
+				<MediaUpload
+					onSelect={onSelectImg}
+					allowedTypes={ALLOWED_MEDIA_TYPES}
+					type="image"
+					value={attributes.img_url}
+					render={({ open }) => (
+						<Button icon="upload" onClick={open}>
+							Open Media Library
+						</Button>
+					)}
+				/>
+			</BlockControls>
 			<TextControl
 				value={attributes.message}
 				onChange={(val) => setAttributes({ message: val })}
