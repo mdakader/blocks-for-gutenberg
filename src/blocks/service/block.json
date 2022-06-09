@@ -1,6 +1,6 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/service",
+	"name": "ebfg/service",
 	"version": "1.0.0",
 	"title": "Service",
 	"category": "ebfg-block",

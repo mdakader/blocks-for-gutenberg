@@ -1,6 +1,6 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/flipbox",
+	"name": "ebfg-block/flipbox",
 	"version": "1.0.0",
 	"title": "Flipbox",
 	"category": "ebfg-block",

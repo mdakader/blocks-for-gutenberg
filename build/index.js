@@ -5613,7 +5613,7 @@ function _setPrototypeOf(o, p) {
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"apiVersion":2,"name":"create-block/card","version":"1.0.0","title":"Card","category":"ebfg-block","icon":"smiley","description":"Simple card block!","supports":{"html":false},"textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
+module.exports = JSON.parse('{"apiVersion":2,"name":"ebfg/card","version":"1.0.0","title":"Card","category":"ebfg-block","icon":"smiley","description":"Simple card block!","supports":{"html":false},"textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
 
 /***/ }),
 
@@ -5624,7 +5624,7 @@ module.exports = JSON.parse('{"apiVersion":2,"name":"create-block/card","version
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"apiVersion":2,"name":"create-block/flipbox","version":"1.0.0","title":"Flipbox","category":"ebfg-block","icon":"smiley","description":"Flipbox Block","supports":{"html":false},"textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
+module.exports = JSON.parse('{"apiVersion":2,"name":"ebfg-block/flipbox","version":"1.0.0","title":"Flipbox","category":"ebfg-block","icon":"smiley","description":"Flipbox Block","supports":{"html":false},"textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
 
 /***/ }),
 
@@ -5635,7 +5635,7 @@ module.exports = JSON.parse('{"apiVersion":2,"name":"create-block/flipbox","vers
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"apiVersion":2,"name":"create-block/gallery","version":"1.0.0","title":"Image Gallery","category":"ebfg-block","icon":"smiley","description":"Image Gallery Block","textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
+module.exports = JSON.parse('{"apiVersion":2,"name":"ebfg/gallery","version":"1.0.0","title":"Image Gallery","category":"ebfg-block","icon":"smiley","description":"Image Gallery Block","textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
 
 /***/ }),
 
@@ -5646,7 +5646,7 @@ module.exports = JSON.parse('{"apiVersion":2,"name":"create-block/gallery","vers
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"apiVersion":2,"name":"create-block/header","version":"1.0.0","title":"Dual Header","category":"ebfg-block","icon":"smiley","description":"Dual header block!","supports":{"html":false},"attributes":{"message":{"type":"string","source":"text","selector":"div","default":"Hello world!"},"align":{"type":"string","default":"none"},"bg_color":{"type":"string"},"text_color":{"type":"string"}},"textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
+module.exports = JSON.parse('{"apiVersion":2,"name":"ebfg/header","version":"1.0.0","title":"Dual Header","category":"ebfg-block","icon":"smiley","description":"Dual header block!","supports":{"html":false},"attributes":{"message":{"type":"string","source":"text","selector":"div","default":"Hello world!"},"align":{"type":"string","default":"none"},"bg_color":{"type":"string"},"text_color":{"type":"string"}},"textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
 
 /***/ }),
 
@@ -5657,7 +5657,7 @@ module.exports = JSON.parse('{"apiVersion":2,"name":"create-block/header","versi
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"apiVersion":2,"name":"create-block/infobox","version":"1.0.0","title":"Infobox","category":"ebfg-block","icon":"smiley","description":"Block to generate a custom Infobox.","supports":{"html":false},"textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
+module.exports = JSON.parse('{"apiVersion":2,"name":"ebfg/infobox","version":"1.0.0","title":"Infobox","category":"ebfg-block","icon":"smiley","description":"Block to generate a custom Infobox.","supports":{"html":false},"textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
 
 /***/ }),
 
@@ -5679,7 +5679,7 @@ module.exports = JSON.parse('{"fab fa-500px":{"unicode":"f26e","label":"500px"},
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"apiVersion":2,"name":"create-block/service","version":"1.0.0","title":"Service","category":"ebfg-block","icon":"smiley","description":"Service block!","supports":{"html":false},"textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
+module.exports = JSON.parse('{"apiVersion":2,"name":"ebfg/service","version":"1.0.0","title":"Service","category":"ebfg-block","icon":"smiley","description":"Service block!","supports":{"html":false},"textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
 
 /***/ })
 
