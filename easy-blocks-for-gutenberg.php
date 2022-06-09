@@ -67,3 +67,34 @@ function ebfg_block_category($block_categories, $editor_context) {
 }
 
 add_filter('block_categories_all', 'ebfg_block_category', 10, 2);
+
+///**
+// * Adding a new (custom) block category.
+// *
+// * @param   array $block_categories                                Array of categories for block types.
+// * @param   WP_Block_Editor_Context|string $block_editor_context   The current block editor context, or a string defining the context.
+// */
+//function ebfg_block_category( $block_categories, $block_editor_context ) {
+//		// Check the context of this filter, return default if not in the post/page block editor.
+//		// Alternatively, use this check to add custom categories to only the customizer or widget screens.
+//		if ( ! ( $block_editor_context instanceof WP_Block_Editor_Context ) ) {
+//				return $block_categories;
+//		}
+//
+//		// You can add extra validation such as seeing which post type
+//		// is used to only include categories in some post types.
+//		// if ( in_array( $block_editor_context->post->post_type, ['post', 'my-post-type'] ) ) { ... }
+//
+//		return array_merge(
+//				$block_categories,
+//				[
+//						[
+//								'slug' => 'ebfg-block',
+//								'title' => __('Easy Blocks', 'ebfg'),
+//								'icon'  => 'wordpress', // Slug of a WordPress Dashicon or custom SVG
+//						],
+//				]
+//		);
+//}
+//
+//add_filter( 'block_categories_all', 'ebfg_block_category', 10, 2);
