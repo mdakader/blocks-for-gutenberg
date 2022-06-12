@@ -883,6 +883,7 @@ function Edit(_ref) {
     onSelect: onSelectImg,
     allowedTypes: ALLOWED_MEDIA_TYPES,
     type: "image",
+    icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_9__["default"],
     value: attributes.img_url,
     render: _ref3 => {
       let {
@@ -896,11 +897,8 @@ function Edit(_ref) {
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaPlaceholder, {
     multiple: true,
     addToGallery: true,
-    value: attributes.img_url // icon={<BlockIcon icon={gallery} />}
-    ,
-    render: () => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.BlockIcon, {
-      icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_9__["default"]
-    }),
+    value: attributes.img_url,
+    icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_9__["default"],
     labels: {
       title: "Image Gallery",
       instructions: "Image gallery show"

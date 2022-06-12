@@ -6,7 +6,6 @@ import {
 	Toolbar,
 	ToolbarGroup,
 	ToolbarButton,
-	BlockIcon,
 } from "@wordpress/components";
 
 import {
@@ -103,6 +102,7 @@ export default function Edit({ attributes, setAttributes }) {
 					onSelect={onSelectImg}
 					allowedTypes={ALLOWED_MEDIA_TYPES}
 					type="image"
+					icon={gallery}
 					value={attributes.img_url}
 					render={({ open }) => (
 						<Button icon="upload" onClick={open}>
@@ -115,8 +115,7 @@ export default function Edit({ attributes, setAttributes }) {
 				multiple={true}
 				addToGallery={true}
 				value={attributes.img_url}
-				// icon={<BlockIcon icon={gallery} />}
-				render={() => <BlockIcon icon={gallery} />}
+				icon={gallery}
 				labels={{
 					title: "Image Gallery",
 					instructions: "Image gallery show",
