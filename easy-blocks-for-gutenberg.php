@@ -29,10 +29,7 @@ function ebfg_block_init() {
 	$blocks = [
 		'header',
 		'card',
-		'service',
-		'infobox',
-		'flipbox',
-		'gallery'
+		'flipbox'
 ];
 	foreach( $blocks as $block ) {
 		register_block_type( plugin_dir_path( __FILE__ ) . 'build/blocks/' . $block );
@@ -45,9 +42,6 @@ add_action( 'init', 'ebfg_block_init' );
 
 function ebfg_block_enqueue_scripts() {
 	$asset_file = require plugin_dir_path( __FILE__ ) . 'build/index.asset.php';
-
-	wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/css/all.css', '', '5.8.1', 'all');
-
 	wp_enqueue_script( 'ebfg-block-main', plugins_url( '/build/index.js', __FILE__ ), $asset_file['dependencies'], 1.0, false);
 }
 add_action( 'enqueue_block_editor_assets', 'ebfg_block_enqueue_scripts');
