@@ -626,99 +626,9 @@ function save(_ref) {
 /*!************************************!*\
   !*** ./src/blocks/gallery/edit.js ***!
   \************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function() {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ Edit; }
-/* harmony export */ });
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/gallery/editor.scss");
-
-
-
-
-
-function Edit(_ref) {
-  let {
-    attributes,
-    setAttributes
-  } = _ref;
-
-  const onChangeBGColor = hexColor => {
-    setAttributes({
-      bg_color: hexColor
-    });
-  };
-
-  const onChangeTextColor = hexColor => {
-    setAttributes({
-      text_color: hexColor
-    });
-  };
-
-  const onSelectImg = imgSelect => {
-    setAttributes({
-      mediaURL: imgSelect.url,
-      mediaID: imgSelect.id
-    });
-  };
-
-  const ALLOWED_MEDIA_TYPES = ["audio", "image"];
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
-    key: "setting"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    id: "gutenpride-controls"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("legend", {
-    className: "blocks-base-control__label"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Background color", "gutenpride")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.ColorPalette // Element Tag for Gutenberg standard colour selector
-  , {
-    onChange: onChangeBGColor // onChange event callback
-
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("legend", {
-    className: "blocks-base-control__label"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Text color", "gutenpride")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.ColorPalette // Element Tag for Gutenberg standard colour selector
-  , {
-    onChange: onChangeTextColor // onChange event callback
-
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: "Image settings"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, "Select Image")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
-    onSelect: onSelectImg,
-    allowedTypes: ALLOWED_MEDIA_TYPES,
-    type: "image",
-    value: attributes.img_url,
-    render: _ref2 => {
-      let {
-        open
-      } = _ref2;
-      return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-        icon: "upload",
-        onClick: open
-      }, "Open Media Library");
-    }
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
-    value: attributes.message,
-    onChange: val => setAttributes({
-      message: val
-    }),
-    style: {
-      backgroundColor: attributes.bg_color,
-      color: attributes.text_color
-    }
-  }), attributes.mediaURL && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    className: "the-image",
-    src: attributes.mediaURL
-  }));
-}
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\Kader\\Local Sites\\alpha\\app\\public\\wp-content\\plugins\\easy-blocks-for-gutenberg\\src\\blocks\\gallery\\edit.js: Unexpected token (65:1)\n\n\u001b[0m \u001b[90m 63 |\u001b[39m \t\t\t\t\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mPanelBody\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 64 |\u001b[39m \t\t\t\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mInspectorControls\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 65 |\u001b[39m \u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mUpdated\u001b[39m upstream\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 66 |\u001b[39m \u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 67 |\u001b[39m \t\t\t\u001b[33m<\u001b[39m\u001b[33mBlockControls\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 68 |\u001b[39m \t\t\t\t\u001b[33m<\u001b[39m\u001b[33mToolbar\u001b[39m label\u001b[33m=\u001b[39m\u001b[32m\"Options\"\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at instantiate (C:\\Users\\Kader\\Local Sites\\alpha\\app\\public\\wp-content\\plugins\\easy-blocks-for-gutenberg\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\Users\\Kader\\Local Sites\\alpha\\app\\public\\wp-content\\plugins\\easy-blocks-for-gutenberg\\node_modules\\@babel\\parser\\lib\\index.js:358:12)\n    at Object.raise (C:\\Users\\Kader\\Local Sites\\alpha\\app\\public\\wp-content\\plugins\\easy-blocks-for-gutenberg\\node_modules\\@babel\\parser\\lib\\index.js:3335:19)\n    at Object.unexpected (C:\\Users\\Kader\\Local Sites\\alpha\\app\\public\\wp-content\\plugins\\easy-blocks-for-gutenberg\\node_modules\\@babel\\parser\\lib\\index.js:3373:16)\n    at Object.jsxParseIdentifier (C:\\Users\\Kader\\Local Sites\\alpha\\app\\public\\wp-content\\plugins\\easy-blocks-for-gutenberg\\node_modules\\@babel\\parser\\lib\\index.js:7779:12)\n    at Object.jsxParseNamespacedName (C:\\Users\\Kader\\Local Sites\\alpha\\app\\public\\wp-content\\plugins\\easy-blocks-for-gutenberg\\node_modules\\@babel\\parser\\lib\\index.js:7789:23)\n    at Object.jsxParseElementName (C:\\Users\\Kader\\Local Sites\\alpha\\app\\public\\wp-content\\plugins\\easy-blocks-for-gutenberg\\node_modules\\@babel\\parser\\lib\\index.js:7800:21)\n    at Object.jsxParseOpeningElementAt (C:\\Users\\Kader\\Local Sites\\alpha\\app\\public\\wp-content\\plugins\\easy-blocks-for-gutenberg\\node_modules\\@babel\\parser\\lib\\index.js:7897:22)\n    at Object.jsxParseElementAt (C:\\Users\\Kader\\Local Sites\\alpha\\app\\public\\wp-content\\plugins\\easy-blocks-for-gutenberg\\node_modules\\@babel\\parser\\lib\\index.js:7930:33)\n    at Object.jsxParseElementAt (C:\\Users\\Kader\\Local Sites\\alpha\\app\\public\\wp-content\\plugins\\easy-blocks-for-gutenberg\\node_modules\\@babel\\parser\\lib\\index.js:7946:32)");
 
 /***/ }),
 
@@ -872,7 +782,16 @@ function save(_ref) {
   }), attributes.message, attributes.mediaURL && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("img", {
     className: "the-image",
     src: attributes.mediaURL
-  }));
+  }), attributes.images.map((image, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("img", {
+    key: index,
+    src: image.url,
+    "data-mediaid": image.id
+  })), attributes.images.map((image, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("img", {
+    className: "duplicate-image",
+    key: index,
+    src: image.url,
+    "data-mediaid": image.id
+  })));
 }
 
 /***/ }),
@@ -1956,19 +1875,6 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************!*\
   !*** ./src/blocks/flipbox/style.scss ***!
   \***************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/blocks/gallery/editor.scss":
-/*!****************************************!*\
-  !*** ./src/blocks/gallery/editor.scss ***!
-  \****************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

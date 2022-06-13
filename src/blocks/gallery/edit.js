@@ -62,6 +62,55 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 			</InspectorControls>
+<<<<<<< Updated upstream
+=======
+			<BlockControls>
+				<Toolbar label="Options">
+					<ToolbarGroup>
+						<ToolbarButton icon={paragraph} label="Paragraph" />
+					</ToolbarGroup>
+					<ToolbarGroup>
+						<ToolbarButton icon={formatBold} label="Bold" />
+						<ToolbarButton icon={formatItalic} label="Italic" />
+						<ToolbarButton icon={link} label="Link" />
+					</ToolbarGroup>
+				</Toolbar>
+				<AlignmentToolbar />
+				<MediaUpload
+					onSelect={onSelectImg}
+					allowedTypes={ALLOWED_MEDIA_TYPES}
+					type="image"
+					icon={gallery}
+					value={attributes.img_url}
+					render={({ open }) => (
+						<Button icon="upload" onClick={open}>
+							Open Media Library
+						</Button>
+					)}
+				/>
+			</BlockControls>
+			<MediaPlaceholder
+				multiple={true}
+				addToGallery={true}
+				value={attributes.img_url}
+				icon={gallery}
+				labels={{
+					title: "Image Gallery",
+					instructions: "Image gallery show",
+				}}
+				onSelect={(newImages) => setAttributes({ images: newImages })}
+			/>
+			<MediaUploadCheck>
+				<MediaUpload
+					onSelect={(media) => console.log("selected " + media.length)}
+					allowedTypes={ALLOWED_MEDIA_TYPES}
+					value={attributes.img_url}
+					render={({ open }) => (
+						<Button onClick={open}>Open Media Library</Button>
+					)}
+				/>
+			</MediaUploadCheck>
+>>>>>>> Stashed changes
 			<TextControl
 				value={attributes.message}
 				onChange={(val) => setAttributes({ message: val })}
@@ -73,6 +122,24 @@ export default function Edit({ attributes, setAttributes }) {
 			{attributes.mediaURL && (
 				<img className="the-image" src={attributes.mediaURL} />
 			)}
+
+			<figure
+				className="scrollable-gallery-inner-container"
+				data-direction="right"
+			>
+				{attributes.images.map((image, index) => (
+					<img key={index} src={image.url} data-mediaid={image.id} />
+				))}
+
+				{attributes.images.map((image, index) => (
+					<img
+						className="duplicate-image"
+						key={index}
+						src={image.url}
+						data-mediaid={image.id}
+					/>
+				))}
+			</figure>
 		</div>
 	);
 }

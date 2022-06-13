@@ -1,9 +1,43 @@
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.scrollable-gallery {
+	overflow: hidden;
+	position: relative;
 
-.wp-block-twitchstreams-first-block {
-	border: 1px dotted #f00;
+	.scrollable-gallery-inner-container {
+		display: flex;
+
+		&[data-direction="left"] {
+			animation: marquee-left 5s linear infinite;
+		}
+
+		&[data-direction="right"] {
+			animation: marquee-right 5s linear infinite;
+		}
+
+		img {
+			object-fit: cover;
+			height: 100%;
+			min-width: 16vw;
+			&:not(:last-child) {
+				margin-right: 16px;
+			}
+		}
+	}
+}
+
+@keyframes marquee-left {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(calc((-1 * var(--total-container-transform))));
+	}
+}
+
+@keyframes marquee-right {
+	0% {
+		transform: translateX(calc(-1 * var(--total-container-transform)));
+	}
+	100% {
+		transform: translateX(0%);
+	}
 }

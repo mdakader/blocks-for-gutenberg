@@ -16,6 +16,18 @@ export default function save({ attributes }) {
 			{attributes.mediaURL && (
 				<img className="the-image" src={attributes.mediaURL} />
 			)}
+			{attributes.images.map((image, index) => (
+				<img key={index} src={image.url} data-mediaid={image.id} />
+			))}
+
+			{attributes.images.map((image, index) => (
+				<img
+					className="duplicate-image"
+					key={index}
+					src={image.url}
+					data-mediaid={image.id}
+				/>
+			))}
 		</div>
 	);
 }
