@@ -8,9 +8,10 @@ export default function save({ attributes }) {
 			style={{
 				backgroundColor: attributes.bg_color,
 				color: attributes.text_color,
+				fontSize: attributes.font_size ? `${attributes.font_size}px` : null,
 			}}
 		>
-			{attributes.message}
+			<div className="ebfg-dual-heading-section">{attributes.message}</div>
 		</div>
 	);
 }

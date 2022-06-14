@@ -1,6 +1,6 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/ebfg-card",
+	"name": "ebfg/ebfg-card",
 	"version": "1.0.0",
 	"title": "Card",
 	"category": "ebfg-block",

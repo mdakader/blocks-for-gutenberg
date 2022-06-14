@@ -1,6 +1,6 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/ebfg-header",
+	"name": "ebfg/ebfg-header",
 	"version": "1.0.0",
 	"title": "Dual Header",
 	"category": "ebfg-block",
@@ -25,6 +25,10 @@
 		},
 		"text_color": {
 			"type": "string"
+		},
+		"font_size": {
+			"type": "number",
+			"default": 12
 		}
 	},
 	"textdomain": "ebfg",
