@@ -7,7 +7,17 @@
 	"icon": "smiley",
 	"description": "Dual header block!",
 	"supports": {
-		"html": false
+		"html": false,
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true
+		},
+		"color": {
+			"text": true,
+			"link": true,
+			"background": true
+		}
 	},
 	"attributes": {
 		"message": {

@@ -1,21 +1,13 @@
 import { __ } from "@wordpress/i18n";
-import {
-	TextControl,
-	__experimentalUnitControl as UnitControl,
-	__experimentalDimensionControl as DimensionControl,
-	__experimentalBoxControl as BoxControl,
-	RangeControl,
-} from "@wordpress/components";
+import { TextControl, RangeControl } from "@wordpress/components";
 
-import { useState } from "@wordpress/element";
-import { desktop } from "@wordpress/icons";
+// import { desktop } from "@wordpress/icons";
 import {
 	useBlockProps,
 	ColorPalette,
 	InspectorControls,
 } from "@wordpress/block-editor";
 import "./editor.scss";
-import { partialRight } from "lodash";
 
 export default function edit({ attributes, setAttributes }) {
 	const onChangeBGColor = (hexColor) => {
@@ -33,26 +25,6 @@ export default function edit({ attributes, setAttributes }) {
 	const onChangeText = (value) => {
 		setAttributes({ message: value });
 	};
-
-	const [value, setValue] = useState("10px");
-
-	const units = [
-		{ value: "px", label: "px", default: 0 },
-		{ value: "%", label: "%", default: 10 },
-		{ value: "em", label: "em", default: 0 },
-	];
-	const updateSpacing = (dimension, size, device = "") => {
-		setAttributes({
-			[`${dimension}${device}`]: size,
-		});
-	};
-
-	const [values, setValues] = useState({
-		top: "50px",
-		left: "10%",
-		right: "10%",
-		bottom: "50px",
-	});
 
 	return (
 		<div {...useBlockProps()}>
@@ -81,20 +53,6 @@ export default function edit({ attributes, setAttributes }) {
 					onChange={onChangefonSize}
 					min={2}
 					max={100}
-				/>
-				<UnitControl onChange={setValue} value={value} units={units} />
-				<DimensionControl
-					label={__("Padding")}
-					icon={desktop}
-					onChange={partialRight(updateSpacing, "paddingSize")}
-					value={attributes.paddingSize}
-				/>
-				<BoxControl
-					label={__("Padding")}
-					icon={"desktop"}
-					values={values}
-					onChange={(value) => console.log(value)}
-					// onChange={(nextValues) => setValues(nextValues)}
 				/>
 			</InspectorControls>
 			<TextControl
