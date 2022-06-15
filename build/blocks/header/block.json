@@ -39,6 +39,18 @@
 		"font_size": {
 			"type": "number",
 			"default": 12
+		},
+		"affiliateLink": {
+			"type": "string",
+			"default": ""
+		},
+		"linkLabel": {
+			"type": "string",
+			"default": "Check it out!"
+		},
+		"hasLinkNofollow": {
+			"type": "boolean",
+			"default": false
 		}
 	},
 	"textdomain": "ebfg",

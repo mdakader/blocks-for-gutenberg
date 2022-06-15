@@ -644,6 +644,12 @@ function edit(_ref) {
     });
   };
 
+  const onChangeAlign = newAlign => {
+    setAttributes({
+      align: newAlign === undefined ? "none" : newAlign
+    });
+  };
+
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
     key: "setting"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -666,6 +672,9 @@ function edit(_ref) {
     onChange: onChangefonSize,
     min: 2,
     max: 100
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.AlignmentControl, {
+    value: attributes.align,
+    onChange: onChangeAlign
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
     value: attributes.message,
     onChange: () => {
@@ -675,6 +684,7 @@ function edit(_ref) {
     style: {
       backgroundColor: attributes.bg_color,
       color: attributes.text_color,
+      textAlign: attributes.align,
       fontSize: attributes.font_size ? `${attributes.font_size}px` : null
     }
   }));
@@ -771,11 +781,10 @@ function save(_ref) {
     style: {
       backgroundColor: attributes.bg_color,
       color: attributes.text_color,
+      textAlign: attributes.align,
       fontSize: attributes.font_size ? `${attributes.font_size}px` : null
     }
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
-    className: "ebfg-dual-heading-section"
-  }, attributes.message));
+  }), attributes.message);
 }
 
 /***/ }),
@@ -974,7 +983,7 @@ module.exports = JSON.parse('{"apiVersion":2,"name":"ebfg/ebfg-flipbox","version
   \**************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"apiVersion":2,"name":"ebfg/ebfg-header","version":"1.0.0","title":"Dual Header","category":"ebfg-block","icon":"smiley","description":"Dual header block!","supports":{"html":false,"spacing":{"margin":true,"padding":true,"blockGap":true},"color":{"text":true,"link":true,"background":true}},"attributes":{"message":{"type":"string","source":"text","selector":"div","default":"Hello world!"},"align":{"type":"string","default":"none"},"bg_color":{"type":"string"},"text_color":{"type":"string"},"font_size":{"type":"number","default":12}},"textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
+module.exports = JSON.parse('{"apiVersion":2,"name":"ebfg/ebfg-header","version":"1.0.0","title":"Dual Header","category":"ebfg-block","icon":"smiley","description":"Dual header block!","supports":{"html":false,"spacing":{"margin":true,"padding":true,"blockGap":true},"color":{"text":true,"link":true,"background":true}},"attributes":{"message":{"type":"string","source":"text","selector":"div","default":"Hello world!"},"align":{"type":"string","default":"none"},"bg_color":{"type":"string"},"text_color":{"type":"string"},"font_size":{"type":"number","default":12},"affiliateLink":{"type":"string","default":""},"linkLabel":{"type":"string","default":"Check it out!"},"hasLinkNofollow":{"type":"boolean","default":false}},"textdomain":"ebfg","editorStyle":"file:../../index.css","style":"file:../../style-index.css"}');
 
 /***/ })
 

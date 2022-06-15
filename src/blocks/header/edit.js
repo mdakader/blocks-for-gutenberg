@@ -6,6 +6,8 @@ import {
 	useBlockProps,
 	ColorPalette,
 	InspectorControls,
+	AlignmentControl,
+	BlockControls,
 } from "@wordpress/block-editor";
 import "./editor.scss";
 
@@ -24,6 +26,12 @@ export default function edit({ attributes, setAttributes }) {
 
 	const onChangeText = (value) => {
 		setAttributes({ message: value });
+	};
+
+	const onChangeAlign = (newAlign) => {
+		setAttributes({
+			align: newAlign === undefined ? "none" : newAlign,
+		});
 	};
 
 	return (
@@ -55,6 +63,9 @@ export default function edit({ attributes, setAttributes }) {
 					max={100}
 				/>
 			</InspectorControls>
+			<BlockControls>
+				<AlignmentControl value={attributes.align} onChange={onChangeAlign} />
+			</BlockControls>
 			<TextControl
 				value={attributes.message}
 				onChange={() => {
@@ -64,6 +75,7 @@ export default function edit({ attributes, setAttributes }) {
 				style={{
 					backgroundColor: attributes.bg_color,
 					color: attributes.text_color,
+					textAlign: attributes.align,
 					fontSize: attributes.font_size ? `${attributes.font_size}px` : null,
 				}}
 			/>
